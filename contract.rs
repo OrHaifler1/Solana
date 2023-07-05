@@ -12,14 +12,14 @@ pub fn process_instruction(
     instruction_data: &[u8],
 ) -> ProgramResult {
     // log a message to the blockchain
-    let x = str("ABDAASDA".to_string());
+    let x = str("str1".to_string());
     msg!(&x);
     // gracefully exit the program
     Ok(())
 }
 
 pub fn str(a:String) -> String {
-    let b = "ABCDABCD";
+    let b = "str2";
     let result = [a,b.to_string()].join("\n");
     return result
 }
